@@ -1,9 +1,8 @@
 import React from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
-class ExpenseFrom extends React.Component {
+class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
     
@@ -99,4 +98,4 @@ class ExpenseFrom extends React.Component {
   }
 }
 
-export default ExpenseFrom;
+export default ExpenseForm;
