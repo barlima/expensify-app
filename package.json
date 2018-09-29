@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Bartlomiej Perucki",
   "license": "MIT",
+  "engines": {
+    "node": "8.10.0"
+  },
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
