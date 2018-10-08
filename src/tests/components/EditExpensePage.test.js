@@ -13,8 +13,8 @@ beforeEach(() => {
     <EditExpensePage 
       expense={expenses[0]} 
       history={history} 
-      editExpense={onSubmit}
-      removeExpense={onClick}
+      startEditExpense={onSubmit}
+      startRemoveExpense={onClick}
     />
   );
 });
@@ -23,7 +23,7 @@ test('should render EditExpensePage', () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('should handle editExpense', () => {
+test('should handle startEditExpense', () => {
   const updates = {
     amount: 10000
   }
@@ -32,7 +32,7 @@ test('should handle editExpense', () => {
   expect(onSubmit).toHaveBeenLastCalledWith(expenses[0].id, updates);
 });
 
-test('should handle removeExpense', () => {
+test('should handle startRemoveExpense', () => {
   wrapper.find('button').simulate('click');
   expect(history.push).toHaveBeenLastCalledWith('/');
   expect(onClick).toHaveBeenLastCalledWith({
